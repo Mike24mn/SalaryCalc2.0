@@ -1,12 +1,4 @@
-// So far, unnecessary object REMEMBER TO DELETE IF NOT USED
-/* const employees = [
-    firstName = '',
-    lastName = '',
-    idNumber = '',
-    jobTitle = '',
-    annualSalary = ''
-] 
-*/
+//Welcome to the Salary Calculator!!!
 
 function handleSubmit(event) {
     console.log('handle submit works...')
@@ -105,7 +97,7 @@ const formatter = new Intl.NumberFormat('en-US', {
     currency: 'USD',
     minimumFractionDigits: 2,
     maximumFractionDigits: 2
-}); // Number formatter for the footers Total Monthly value
+}); // Number formatter for $ values
 
 const formattedNumberTest = formatter.format(1222222222) // Testing formatter functionality
 console.log(formattedNumberTest);
