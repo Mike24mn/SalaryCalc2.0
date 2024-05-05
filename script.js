@@ -77,11 +77,25 @@ function checkTotalBudget(total) {
 //End addEmployeeInfo function
 
 function deleteSubmission(event) {
-    console.log('deleteSubmission works')
+    console.log('deleteSubmission works') //Function to handle deletion of an employee on the table
     console.log(event)
     let thisColumn = event.target.parentElement.parentElement
     let deleteTableRow = event.target.parentElement.parentElement // Targets parents parent element, meaning entire table row in this scenario!
-    thisColumn.remove()
+    let annualSalaryInput = parseFloat(deleteTableRow.querySelector('td:nth-child(5)').textContent.replace(/[^0-9.-]+/g,""));  // targets specific element when we delete a table, the annual salary, then .replace cleans up the number by removing digits, dots and hyphens so our future computations are not affected
+    thisColumn.remove() // removes table row from DOM
+    updateTotalMonthlyAfterDelete(annualSalaryInput) // call to function to udpate total monthly after delete
+
+}
+
+// End deleteSubmission
+
+function updateTotalMonthlyAfterDelete(amount) {
+    let totalElement = document.getElementById('totalVal'); // set totalElement to target our footer ID totalVal
+    let currentTotal = parseFloat(totalElement.textContent)
+    let employeeMonthlSal = amount / 12 
+    let newTotal = currentTotal - employeeMonthlSal
+    totalElement.textContent = newTotal.toFixed(2)
+    checkTotalBudget(newTotal)
 }
 
 //End deleteSubmission function
@@ -92,6 +106,7 @@ const formatter = new Intl.NumberFormat('en-US', {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2
 }); // Number formatter for the footers Total Monthly value
+
 const formattedNumberTest = formatter.format(1222222222) // Testing formatter functionality
 console.log(formattedNumberTest);
 
