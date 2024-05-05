@@ -1,0 +1,109 @@
+.container {
+    margin-top: 30px;
+}
+
+.table-bordered th {
+    padding: 20px 0;
+    font-size: 18px;
+    background: #dbdddd;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+    font-size: 8ch;
+    font-family: cursive;
+}
+
+header {
+    background-color: #7a7a7a;
+    opacity: 1;
+    height: auto;
+    width: auto;
+    background-size: contain;
+    image-rendering: optimizeQuality
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('office Small.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;  /* Image adjustment only btw... */
+    z-index: -1;
+}
+
+
+
+body {
+    background-image: url('Calculator Image.jpg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    background-attachment: fixed;
+    background-color: lightgray;
+}
+
+main {
+    flex: auto;
+    max-width: 80%;
+    margin: auto;
+}
+
+#messages {
+    font-weight: bold;
+    color: red;
+    font-size: 3ch;
+}
+
+#messages h2 {
+    color: black;
+}
+
+footer {
+    background-color: #7a7a7a;
+    opacity: 1;
+    text-align: right;
+    font-size: 3ch;
+    font-weight: bold;
+    margin-top: 15%;
+}
+
+.over-budget {
+    color: red;
+    font-weight: bold;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    text-align: left;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 2.15em;
+    background-color: #7a7a7a;
+}
+
+th,
+td {
+    color: black;
+    font-weight: bold;
+    padding: .5em;
+    min-width: 3.5em;
+}
+
+thead {
+    background: #7a7a7a;
+    color: #fcfcfc;
+}

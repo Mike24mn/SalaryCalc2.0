@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script defer src="script.js"></script>
   <title>Salary Calculator</title>
 </head>
+
 <body>
   <header>
     <h1>Salary Calculator</h1>
   </header>
   <main>
     <h2>Add Employee</h2>
+    <div id="messages">
+
+    </div>
+    <form onSubmit="handleSubmit(event)">
+      <input id="firstName" placeholder="First Name" type="text" data-testid="firstNameInput">
+      <input id="lastName" placeholder="Last Name" type="text" data-testid="lastNameInput">
+      <input id="identity" placeholder="ID" type="text" data-testid="idInput">
+      <input id="title" placeholder="Title" type="text" data-testid="titleInput">
+      <input id="annualSalary" placeholder="Annual Salary" type="text" data-testid="annualSalaryInput">
+      <button type="submit" data-testid="submitButton">Submit</button>
+    </form>
+
     <h2>Employees</h2>
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Annual Salary</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="containerLocation">
+        </tbody>
+      </table>
   </main>
   <footer>
-    <p>Total Monthly</p>
+    Total Monthly:$<span id="totalVal">0</span>
   </footer>
 </body>
+
 </html>
