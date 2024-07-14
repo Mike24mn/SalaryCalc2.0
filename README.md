@@ -1,9 +1,11 @@
-# Project Name
+# SalaryCalc2.0
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+## Overview
+
+SalaryCalc2.0 is a web application designed to log and track employee salaries within a predefined budget. It provides a comprehensive table interface to manage and monitor employee salary data effectively. The application allows setting and adjusting the salary budget dynamically to ensure that employee salaries are within the allocated budget limits.
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+SalaryCalc2.0 logs employee salaries and enables users to set and manage a salary budget. It ensures that total employee salaries do not exceed the specified budget, providing a tool for businesses to maintain financial control and oversight over payroll expenses.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+![Salary Calculator](https://github.com/user-attachments/assets/3e48a3d1-b476-4ca3-adf9-9eaeb8fe842b)
